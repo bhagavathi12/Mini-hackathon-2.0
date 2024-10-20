@@ -10,7 +10,7 @@
     <div class="container" id="parentcontainer">
         <h1 class="quiz-title">Quiz Game</h1>
         <!-- Players input their names and start the game. -->
-        <div class="input">
+        <div class="inputdiv" id="inputdiv">
             <div class="player1">
                 <label for="player1">Player 1:</label>
                 <input type="text" placeholder="Enter your name" name="player1" id="player1">
@@ -22,16 +22,16 @@
             <button class="play" id="startButton">Start</button>
         </div>
         <!-- Both players choose a common category from a list. -->
-       <div class="categorylist" id="category">
-
-       </div>
-       <div class="questionlist" id="question"> </div>
-       <div  id="result"></div>
+       <div class="categorylist" id="category"></div>
+       <div class="questionlist" id="question"></div>
+       <div  id="resultdiv"></div>
        <button class="next" id="next" style="display: none;">Next</button>
-       <button class="endgame" id="exitgame">End Game</button>
-           
+       <div class="buttoncontainer">
+            <button class="endgame" id="exitgame">End Game</button>
+            <button class="results" id="result">Results</button>
+            <button class="refresh" id="refresh">Refresh</button>
+       </div>
     </div>
-   
 <script src="script.js"></script>
 </body>
 </html>

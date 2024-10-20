@@ -7,7 +7,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:50px
+    justify-content: center;
+    min-height: 100vh;
 }
 #parentcontainer{
     display: flex;
@@ -21,7 +22,7 @@ body{
     background-color: #758AA2;
     box-shadow: 1px 1px 4px rgba(0,0,1,0.5);
 }
-.input{
+.inputdiv{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +47,8 @@ button{
     padding: 10px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 #startButton{
     height: 40px;
@@ -53,13 +56,6 @@ button{
     background-color: #45CE30;
     cursor: pointer;
 }
-
-.endgame{
-    background-color: #FF3E4D;
-    cursor: pointer;
-
-}
-
 .categorydiv{
     display: grid;
     grid-template-columns: repeat(2, 1fr);   
@@ -85,6 +81,7 @@ button{
 }
 .questionelement{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -118,23 +115,61 @@ input[type=radio]{
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
-}
-.background-change{
-    background-color: #DAE0E2;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+   
 }
 .resultdiv{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #DAE0E2;
 }
 .endgame{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #FF3031;
-    margin: 10px;
     padding: 10px;
+    margin: 5px;
     cursor: pointer;
+    width: 100px;
+    height: 50px; 
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
+}
+.buttoncontainer .results{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.buttoncontainer .refresh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+}
+.buttoncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.playerturn{
+    text-transform: capitalize;
+    color:#FF3E4D;
+}
+.background-change{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #badc57;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
 }
