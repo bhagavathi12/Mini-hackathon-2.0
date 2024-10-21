@@ -84,6 +84,7 @@ button{
     border: none;
     border-radius: 20px;
     padding: 10px;
+    margin: 20px 0px;
 }
 .questionelement{
     display: flex;
@@ -182,7 +183,8 @@ input[type=radio]{
     align-items: center;
     justify-content: center;
     background-color: #badc57;
-    padding: 5px;
+    padding: 10px;
+    margin: 20px;
     border-radius: 5px;
     box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
 }

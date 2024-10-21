@@ -127,9 +127,9 @@ const startQuiz = (questions) => {
     currentPlayer = 1 // initializing again to reset the player's turn when player ends the quiz before completing all the questions.
 
     //Filters questions based on difficulty level
-   const easy = questions.filter((ques) => ques.difficulty === 'easy')
-   const medium = questions.filter((ques) => ques.difficulty === 'medium')
-   const hard = questions.filter((ques) => ques.difficulty === 'hard')
+    easy = questions.filter((ques) => ques.difficulty === 'easy')
+    medium = questions.filter((ques) => ques.difficulty === 'medium')
+    hard = questions.filter((ques) => ques.difficulty === 'hard')
     
    //All the 3 arrays into an single array using spread operator-finalized array having 6 questions.
    currentQuestions = [...fetchRandomQuestions(easy),...fetchRandomQuestions(medium),...fetchRandomQuestions(hard)]
