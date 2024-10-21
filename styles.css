@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 body{
     background-color: beige;
@@ -18,24 +19,28 @@ body{
     margin: 10px auto;
     border: none;
     border-radius: 8px;
-    padding: 10px;
+    padding: 30px;
     background-color: #758AA2;
     box-shadow: 1px 1px 4px rgba(0,0,1,0.5);
+}
+.quiz-title{
+    margin: 20px;
 }
 .inputdiv{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 30px;
     margin: 5px;
 }
 
 #next{
-    width:50px  
+    width:100px;
+    text-align: center;
 }
 #player1, #player2{
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
     font-size: medium; 
 }
@@ -55,11 +60,12 @@ button{
     text-align: center;
     background-color: #45CE30;
     cursor: pointer;
+    margin: 20px;
 }
 .categorydiv{
     display: grid;
     grid-template-columns: repeat(2, 1fr);   
-    margin: 15px 0;
+    margin: 20px 0;
     gap: 15px
 }
 .categorydiv button{
@@ -84,6 +90,7 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 .questionelement .question{
     font-size: 20px;
@@ -91,7 +98,7 @@ button{
 .answer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:0;
+    padding: 5px;
 }
 input[type=radio]{
     display: inline-block;
@@ -107,8 +114,8 @@ input[type=radio]{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-    margin: 10px;    
+    padding: 10px;
+    margin: 20px;   
     cursor: pointer;
 }
 .result{
@@ -121,7 +128,10 @@ input[type=radio]{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    width:350px;
     justify-content: center;
+    border-radius: 5px;
     background-color: #DAE0E2;
 }
 .endgame{
@@ -130,7 +140,7 @@ input[type=radio]{
     justify-content: center;
     background-color: #FF3031;
     padding: 10px;
-    margin: 5px;
+    margin: 0px 5px;
     cursor: pointer;
     width: 100px;
     height: 50px; 
@@ -142,7 +152,7 @@ input[type=radio]{
     justify-content: center;
     width: 100px;
     height: 50px;
-    margin: 5px;
+    margin: 0px 5px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 .buttoncontainer .refresh{
@@ -151,7 +161,7 @@ input[type=radio]{
     justify-content: center;
     width: 100px;
     height: 50px;
-    margin: 5px;
+    margin: 0px 5px;
     background-color:#FFF222 ;
 }
 .buttoncontainer{
@@ -159,10 +169,12 @@ input[type=radio]{
     align-items: center;
     justify-content: center;
     padding: 5px;
+    margin: 10px;
 }
 .playerturn{
     text-transform: capitalize;
     color:#FF3E4D;
+    margin: 5px;
 }
 .background-change{
     display: flex;

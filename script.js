@@ -58,6 +58,8 @@ const startGame = (e) => {
     }
     else{
         alert('Please enter names for both players!')
+        document.getElementById('inputdiv').style.display = 'flex'
+
     }
 }
 
@@ -72,7 +74,6 @@ const fetchCategories = async () => {
     try{
         const response = await fetch('https://the-trivia-api.com/v2/categories')//API call to fetch categories.
         const category = await response.json()
-        console.log(category)
         return category 
     }
     catch(err){
@@ -274,14 +275,14 @@ const resultDisplay = () => {
                 categorydiv.style.display = 'flex'
                 //conditional check to decide on the winners.
                 if(player1_score>player2_score){
-                    resultdiv.innerHTML = `<p class="result">Congratulations!! You have completed the quiz!!! Choose another category if you wish to continue!! </p> <h1>${player1.value.trim()} is the winner!!!!</h1> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
+                    resultdiv.innerHTML = `<p class="result">Congratulations!! You have completed the quiz. Choose another category if you wish to continue!! </p> <h1>${player1.value.trim()} is the winner!!!!</h1> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
                 }
                 else if(player1_score === player2_score)
                 {
-                    resultdiv.innerHTML = `<p class="result">Congratulations!! You have completed the quiz!!! Choose another category if you wish to continue!! </p> <h1>It's a tie!!!</h1> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
+                    resultdiv.innerHTML = `<p class="result">Congratulations!! You have completed the quiz. Choose another category if you wish to continue!! </p> <h1>It's a tie!!!</h1> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
                 }
                 else{
-                    resultdiv.innerHTML = `<p class="result">Congratulations!! You have completed the quiz!! Choose aother category if you wish to continue!! </p> <h1>${player2.value.trim()} is the winner!!!!</h1> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
+                    resultdiv.innerHTML = `<p class="result">Congratulations!! You have completed the quiz. Choose aother category if you wish to continue!! </p> <h1>${player2.value.trim()} is the winner!!!!</h1> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
                 }
                 //reset all the values to initial level.
                 player1_score = 0;
@@ -297,7 +298,7 @@ const resultDisplay = () => {
                 questiondiv.style.display = 'none'
                 categorydiv.style.display = 'flex'
                 next.style.display = 'none'
-                resultdiv.innerHTML = `<p class="result"> You didn't completed the quiz. You played only for ${currentQuestionIndex} questions.</p> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3>`
+                resultdiv.innerHTML = `<p class="result"> You didn't completed the quiz. You played only for ${currentQuestionIndex} questions.</p> <h2 class="score"> ${player1.value.trim()}'s score: ${player1_score} </h2> <h2 class="score"> ${player2.value.trim()}'s score: ${player2_score} </h2> <h3> Categories Selected: ${selectedCategory.join(', ')} </h3> <p class="result"> Choose another category to play again. Click refresh to play for the same category again!! <p>`
                 //reset all the values to initial level.
                 player1_score = 0;
                 player2_score = 0;
